@@ -145,7 +145,13 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
  
         accesskey="1"
         Tecla de acceso rápido. En Windows y Linux se activa en
-        combinación con la tecla ALT. -->
+        combinación con la tecla ALT.
+      
+        value="< ?= $nombre1Esc?>"
+        Muestra el valor de una expresión de PHP. En este caso, es el
+        valor de la variable $nombre1Esc, que está codificada para evitar
+        inyección de código.
+        -->
         <input type="text" name="nombre1" placeholder="Nombre 1"
                 accesskey="1" value="<?= $nombre1Esc?>">
       </p>
