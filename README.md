@@ -1,7 +1,7 @@
 # web1
 Ejemplo sencillo al estilo Web 1.
 
-El navegador pide al servidor una página y este la construye con
+El navegador pide al servidor una página y este último la construye con
 instrucciones de PHP que realizan la lógica de la aplicación, para luego
 devolverla al navegador web, que solo la muestra.
 ## Depuración
