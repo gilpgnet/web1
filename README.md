@@ -2,8 +2,8 @@
 Ejemplo sencillo al estilo Web 1.
 
 El navegador pide al servidor una página y este la construye con
-instrucciones de PHP que realizan la lógica de la aplicación y la devuelve
-al navegador web para que solo la muestre.
+instrucciones de PHP que realizan la lógica de la aplicación, para luego
+devolverla al navegador web, que solo la muestra.
 ## Depuración
 El código se puede depurar con algún IDE que soporte XDebug; por ejemplo:
   - Visual Studio Code
