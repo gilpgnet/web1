@@ -10,7 +10,7 @@ El código se puede depurar con algún IDE que soporte XDebug; por ejemplo:
   valor de **IDE Key**. Asegura realizar las siguientes configuraciones
   del archivo **php.info** y reiniciar el servidor después de realizar los
   cambios. Si utilizas **WAMP server**, estos cambios se pueden hacer
-  mediante el menú de configuración de opciones para PHP.
+  mediante el menú **Configuración de PHP**.
     - **xdebug.remote_enable** = On
     - **xdebug.profiler_enable** = On
     - **xdebug.profiler_enable_trigger** = On
