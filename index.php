@@ -12,6 +12,10 @@ mb_internal_encoding("UTF-8");
  * Asigna una cadena de texto vacía a la variable $respuesta. Todas los
  * identificadores de variables inicial con $. */
 $respuesta = "";
+/* La cláusula "try" contiene código que puede fallar, y al hacerlo,
+ * lanza una excepción; se aborta la ejecución de las instrucciones
+ * posteriores al punto donde ocurre el fallo y continúa en la
+ * cláusula catch, la cual recibe la excepción lanzada. */
 try {
   /* filter_input(INPUT_GET, "nombre1")
    * Lee el parámetro "nombre1" que recibe del navegador web. En este
@@ -58,9 +62,9 @@ try {
    * Es la excepción lanzada en algún punto dentro de try.
    * 
    * $e->getMessage()
-   * Devuelve el mensaje de la excepción. en este ejemplo puede ser
-   * "Falta nombre1" cuando se ejecuta la línea 37 o "Falta nombre2" para
-   * el error de la línea 39. */
+   * Devuelve el mensaje de la excepción. En este ejemplo, puede ser
+   * "Falta nombre1" cuando se ejecuta la línea 49 o "Falta nombre2" para
+   * el error de la línea 51. */
   $respuesta = $e->getMessage();
 }
 /* Los valores de $nombre1, $nombre2 y $respuesta se usan para constuir la
