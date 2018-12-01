@@ -116,7 +116,7 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
        * las definiciones entre { y }, que en este caso es a casi a todo
        * el contenido del element body.
        *
-       * font-famly: sans-serif
+       * font-family: sans-serif
        * Se un font predefinido por el navegador web que tenga la
        * característica sans-serifa (sin serifas o remates).
        * Las serifas o remates son pequeños adornos que se ponen en los
@@ -124,7 +124,7 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
        * Ejemplos de fonts con serifa son: Times New Roman, Times,
        * Garamond y Courier.
        * Ejemplos de fonts sin serifa son: Arial y Helvética. */
-      body {font-famly: sans-serif}
+      body {font-family: sans-serif}
     </style>
   </head>
   <body>
