@@ -7,10 +7,10 @@ El código se puede depurar con algún IDE que soporte XDebug; por ejemplo:
   - Sublime
 1. Hay que correr el **phpinfo** de tu sitio. Si XDebug está activado,
   observarás una sección con el nombre XDebug con las configuraciones y el
-  valor de **IDE Key**. Asegura que las siguientes configuraciones del
-  archivo **php.info**. Asegúrate de reiniciar el servidor después de
-  realizar los cambios. Si utilizas WAMP server, estos cambios se pueder
-  hacer mediante el menú de configuración de opciones para PHP.
+  valor de **IDE Key**. Asegura realizar las siguientes configuraciones
+  del archivo **php.info** y reiniciar el servidor después de realizar los
+  cambios. Si utilizas **WAMP server**, estos cambios se pueden hacer
+  mediante el menú de configuración de opciones para PHP.
     - **xdebug.remote_enable** = On
     - **xdebug.profiler_enable** = On
     - **xdebug.profiler_enable_trigger** = On
