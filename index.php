@@ -122,8 +122,10 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
        * Las serifas o remates son pequeños adornos que se ponen en los
        * extremos de las líneas de los caracteres.
        * Ejemplos de fonts con serifa son: Times New Roman, Times,
-       * Garamond y Courier.
-       * Ejemplos de fonts sin serifa son: Arial y Helvética. */
+       * Garamond y Courier. Se aplican principalmente a textos largos y
+       * párrafos.
+       * Ejemplos de fonts sin serifa son: Arial y Helvética. Se aplican
+       * principalmente en textos cortos e interfaces de usuario. */
       body {font-family: sans-serif}
     </style>
   </head>
