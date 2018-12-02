@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<!-- Todos los archivos HTML 5 empiezan con la línea de arriba. -->
-<?php // <?php inicia código php que se ejecuta en el servidor.
+<!-- Todos los archivos HTML 5 empiezan con la línea de arriba.
+
+  Esta estructura es un comentario y normalmente explica una sección de
+  código. -->
+  <?php // <?php inicia código php que se ejecuta en el servidor.
 
 /* Este código se ejecuta en un servidor web y contruye una página que
  * será recibida por un navegador web. */
@@ -33,7 +36,7 @@ try {
    * caracteres extraños para que veas como se codifica la URL. Los
    * caracteres codificados por el formulario son decodificados por PHP
    * para procesarlos correctamente.
-   * 
+   *
    * trim
    * Quita los espacios al inicio y al final del texto que recibe como
    * parámetro. Prueba que pasa cuando no usas trim y envías valores con
@@ -60,7 +63,7 @@ try {
 
    * $e
    * Es la excepción lanzada en algún punto dentro de try.
-   * 
+   *
    * $e->getMessage()
    * Devuelve el mensaje de la excepción. En este ejemplo, puede ser
    * "Falta nombre1" cuando se ejecuta la línea 49 o "Falta nombre2" para
@@ -76,7 +79,7 @@ try {
  * observarás que el código no es afectado. Después observa que sucede
  * cuando en vez de mostrar el valor de $respuestaEsc, muestras
  * $respuesta.
- * 
+ *
  * $nombre1Esc = htmlentities($nombre1, ENT_QUOTES | ENT_HTML5, 'UTF-8');
  * Codifica el texto de tal forma que los caracteres especiales de HTML5
  * (<, >, /), los apóstrofos (') y las comillas (") que contiene, se
@@ -87,7 +90,39 @@ $nombre1Esc = htmlentities($nombre1, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 $nombre2Esc = htmlentities($nombre2, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
-?> <!-- Fin del código PHP. Lo que sigue, se pasa tal cual al cliente. -->
+?> <!-- Fin del código PHP. Lo que sigue, se pasa tal cual al cliente.
+
+  Las páginas HTML están formadas por estructuras como las siguientes:
+
+  * Element con contenido: usan una etiqueta inicial, una etiqueta final y
+   un contenido. Tienen una estructura como la siguiente:
+  <element atributo1="valor1" atributo2="valor2">
+    contenido
+  </element>
+
+  * Element sin contenido: solo usan una etiqueta inicial y tienen una
+   estructura como la siguiente:
+  <element atributo1="valor1" atributo2="valor2">
+
+  * Texto
+
+  * Comentarios como este
+
+  element se refiere al tipo de información que representa la estructura,
+  como pueden ser entre otros:
+    * html: para la estructura completa de una página
+    * h1: el título de una página
+    * p: un párrafo de texto
+
+  Los atributos son características de un element a las que se les asocia
+  un valor. Los atributos son opcionales y no hay límite al número de
+  ellos que puede contener la etiqueta inicial, aunque en los ejemplos
+  anteriores solo se hayan puesto2.
+
+  Algunos atributos son boolean y solo se pone el nombre, sin su valor,
+  lo cual significa que esa característica si aplica para el element.
+
+  El contenido de un element son otros element, texto y comentarios. -->
 <html>
   <head>
     <!-- Se indica que la codificación es UTF-8. Ver http://unicode.org/
@@ -100,21 +135,29 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
     name="viewport"
     Define las características de la pantalla de un dispositivo móvil.
-    
+
     width=device-width
     El tamaño del viewport es el equivalente al ancho de la pantalla en
     píxeles CSS en una escala de 100%.
-    
+
     initial-scale=1
     Inicia sin hacer zoom. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Hoja de estilo, que permite cambiar la apariencia de la página.
     -->
     <style>
-      /* body {font-famly: sans-serif}
-       * body es un "selector" que indica a que element de HTML se aplican
-       * las definiciones entre { y }, que en este caso es a casi a todo
-       * el contenido del element body.
+      /* Una hoja de estilos define reglas. Cada regla tiene una
+       * estructura como esta:
+       *    selector {atributo1: valor1; atributo2: valor2; ...}
+       * la sección entre { y } se conoce como bloque de declaraciones.
+       *
+       * Los atributos y sus valores definen la apariencia de los element
+       * que coinciden con los selectores.
+       *
+       * body {font-famly: sans-serif}
+       * El tipo de selector más simple es el nombre de un element. La
+       * regla se aplica a todas las veces que aparezca ese element en la
+       * página. En este caso se selecciona el element body.
        *
        * font-family: sans-serif
        * Se un font predefinido por el navegador web que tenga la
@@ -125,7 +168,10 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
        * Garamond y Courier. Se aplican principalmente a textos largos y
        * párrafos.
        * Ejemplos de fonts sin serifa son: Arial y Helvética. Se aplican
-       * principalmente en textos cortos e interfaces de usuario. */
+       * principalmente en textos cortos e interfaces de usuario.
+       * El atributo font-family se hereda a casi tode el contenido del
+       * element indicado por el selector. En este caso es a casi toda la
+       * página. */
       body {font-family: sans-serif}
     </style>
   </head>
@@ -136,39 +182,39 @@ $respuestaEsc = htmlentities($respuesta, ENT_QUOTES | ENT_HTML5, 'UTF-8');
     <form>
       <p>
         <!-- Campo de captura de texto. Atributos:
-        
+
         type="text"
         Indica que el campo input sirve para capturar texto en general.
-        
-        name="nombre1" 
+
+        name="nombre1"
         Nombre del campo de texto dentro de la forma. Se utiliza para
         procesar su valor.
- 
+
         placeholder="Nombre 1"
         Texto conocido como sello de agua. Cuando el elemento no tiene
         valor, se muestra el valor de placeholder. Cuando sí tiene valor,
         el sello de agua se quita y se pone el valor del elemento.
- 
+
         accesskey="1"
         Tecla de acceso rápido. En Windows y Linux se activa en
         combinación con la tecla ALT.
-      
+
         value="< ?= $nombre1Esc?>"
         Muestra el valor de una expresión de PHP. En este caso, es el
         valor de la variable $nombre1Esc, que está codificada para evitar
         inyección de código.
         -->
         <input type="text" name="nombre1" placeholder="Nombre 1"
-                accesskey="1" value="<?= $nombre1Esc?>">
+                accesskey="1" value="<?=$nombre1Esc?>">
       </p>
       <p>
         <input type="text" name="nombre2" placeholder="Nombre 2"
-                accesskey="2" value="<?= $nombre2Esc?>">
+                accesskey="2" value="<?=$nombre2Esc?>">
       </p>
       <p>
         <!-- La etiqueta output se usa para mostrar los resultados
         generados por la página. -->
-        <output><?= $respuestaEsc ?></output>
+        <output><?=$respuestaEsc?></output>
       </p>
       <p>
         <!-- botón para activar la forma.
